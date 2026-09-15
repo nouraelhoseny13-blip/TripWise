@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  /* TripWise Color System */
+  --color-primary: #e85d8e;
+  --color-primary-dark: #c83e70;
+  --color-soft-pink: #fce0ea;
+
+  --color-background: #fff7f9;
+  --color-text: #2a1720;
+  --color-muted: #6f5961;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Radius */
+  --radius-small: 10px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+}
+
+:root {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  color-scheme: light;
+}
+
+:root.dark {
+  --color-background: #1b1116;
+  --color-text: #fff4f7;
+  --color-muted: #d1b8c1;
+  --color-white: #271a20;
+  --color-soft-pink: #42232f;
+
+  --color-primary: #f06b9a;
+  --color-primary-dark: #e34f82;
+
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+}
+
+body,
+button,
+input,
+textarea,
+select,
+div,
+section,
+article,
+aside,
+header,
+footer {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+:root.dark ::selection {
+  background: var(--color-primary-dark);
+  color: white;
+}
